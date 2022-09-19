@@ -1,0 +1,6 @@
+[submodule "death-causes-frontend"]
+	path = death-causes-frontend
+	url = git@github.com:FarDust/death-causes-us-frontend.git
+[submodule "death-causes-backend"]
+	path = death-causes-backend
+	url = git@github.com:FarDust/death-causes-us-backend.git
