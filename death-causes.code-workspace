@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "death-causes-backend"
+		},
+		{
+			"path": "death-causes-frontend"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {}
+}
