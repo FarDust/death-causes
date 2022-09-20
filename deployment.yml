@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: death-causes-deployment
+spec:
+  selector:
+    matchLabels:
+      app: death-causes
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: death-causes
+        env: development
+    spec:
+      containers:
+      - name: death-causes
+        image: gcr.io/${{ steps.auth.outputs.project_id }}/death-causes:latest
+        ports:
+        - containerPort: 4000
+        env:
+        - name: PORT
+          value: "4000"
+        - name: LOG_LEVEL
+          value: "info"
+        - name: NODE_ENV
+          value: "production"
+        envFrom:
+        - configMapRef:
+            name: supabase-config
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: death-causes-service
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 4000
+    protocol: TCP
+  selector:
+    app: death-causes
