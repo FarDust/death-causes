@@ -11,34 +11,22 @@ The project is divided in three parts, the infrastructure, the backend and the f
 
 ### Infrastructure
 
-The infrastructure is a terraform project that creates the resources in GCP. The resources are:
+The infrastructure is contained under the root folder.
+The infrastructure is a terraform project that creates the resources in GCP.
 
 The database is hosted by Supabase, a Postgres database with a lot of features.
 
 
 ### Backend
 
-The backend is a NestJS project that connects to the database and exposes the data to the frontend. The backend is a warpper of the Supabase SDK.
-
-### Frontend
-
-The frontend is a React project that consumes the data from the backend.
-
-## Folder Structure
-
-The project is divided in three folders, one for each part of the project.
-
-### Infrastructure
-
-The infrastructure is contained under the root folder.
-
-### Backend
-
 The backend is contained under the `death-causes-backend` folder as submodule.
+The backend is a NestJS project that connects to the database and exposes the data to the frontend. The backend is a wrapper of the Supabase SDK.
 
 ### Frontend
 
 The frontend is contained under the `death-causes-frontend` folder as submodule.
+The frontend is a React project that consumes the data from the backend.
+
 
 ### Data Processing
 
