@@ -5,7 +5,9 @@ The source data can be found in the [CDC](https://catalog.data.gov/dataset/month
 
 ## Project Structure
 
-The project is divided in three parts, the infrastructure, the backend and the frontend.
+The project is divided in three parts, the infrastructure, the backend and the frontend. The cloud providers were selected due to the free tier and the simplicity of the services.
+
+![Infrastructure](./solution.drawio.png)
 
 ### Infrastructure
 
